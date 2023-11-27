@@ -1,3 +1,8 @@
+function displayCard (element) {
+    element.style.display = "block";
+    element.scrollIntoView();
+}
+
 /*
  * Affiche le contenu d'un tableau de type Array à la fin courante du document html.
  * Le résultat est présenté sous forme de table HTML dans d'un bloc de type "cartouche".
@@ -8,12 +13,14 @@
  */
 
 function displayArray (tab) {
-    let out = '<div class="card result">\n<table class="display">\n<tr>\n';
+    let element = document.getElementById ('result');
+    displayCard (element);
+    let out = '<table class="display">\n<tr>\n';
     tab.forEach ((item, index) => {
-        out += '<td>' + item + '</td>\n';
+        out += '<td class="border-blue">' + item + '</td>\n';
     });
-    out += '</tr>\n</table>\n</div>';
-    document.writeln (out);
+    out += '</tr>\n</table>\n';
+    element.innerHTML = out;
 }
 
 
@@ -28,10 +35,12 @@ function displayArray (tab) {
  */
 
 function displayOneResult (message, result) {
-    let out = '<div class="card result">\n<table class="display">\n<tr>\n';
+    let element = document.getElementById ('result');
+    displayCard (element);
+    let out = '<table class="display">\n<tr>\n<td>';
     out += (message + " " + result);
-    out += '</tr>\n</table>\n</div>';
-    document.writeln (out);
+    out += '</td></tr>\n</table>\n</div>';
+    element.innerHTML = out;
 }
 
 

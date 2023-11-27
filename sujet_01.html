@@ -58,8 +58,18 @@
     <p class="h6 font-weight-bold text-center">Sujet #01 - Somme des inverses</p>
     <p>Calculer, pour un nombre <em>n</em> entier compris entre 1 et 100, la somme des inverses de 1 à <em>n</em>.<br>
         C'est à dire la somme : 1/1 + 1/2 + 1/3 + ... + 1/<em>n</em><br>
-        Le résultat sera restitué à l'utilisateur par le moyen de votre choix (console, zone de résultat, ...), mais 
-        la fonction "displayOneResult" donnée dans <em>tools.js</em> peut se révéler utile et sera même un plus !
+        Étapes à suivre :
+        <ol>
+            <li>Écrire une fonction nommée <em>inverse</em> qui prend pour paramètre un nombre et retour l'inverse de ce nombre. 
+                Par exemple pour <em>3</em> cette fonction retourne <em>1/3</em>. Plus généralement pour <em>x</em>, 
+                elle retournera <em>1/x</em>.</li>
+            <li>Écrire la fonction appelée lors de l'appui sur le bouton de calcul. Cette fonction, après récupération de la 
+                valeur finale <em>n</em>, affectuera le calcul de la somme en faisant usage de la fonction 
+                <em>inverse</em> définie au point précédent.</li>
+            <li>Restituer le résultat à l'utilisateur par le moyen de votre choix (console, zone de résultat, ...), mais 
+                la fonction "displayOneResult" donnée dans <em>tools.js</em> peut se révéler utile et sera même un plus !</li>
+        </ol>
+        
     </p>
 </div>
 
@@ -73,9 +83,13 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    // YOUR CODE HERE
+<!-- html display area wrapper -->
+<div class="card result" id="result">
+</div>
 
+<script type="text/javascript">
+
+    // Your code here...
 
 </script>
 </body>
