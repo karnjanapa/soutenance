@@ -91,7 +91,32 @@
 <script type="text/javascript">
 
     // YOUR CODE HERE
+    function puissance(x,n) 
+    {
+        let xres = x;
+        for (let i=0; i<n-1; i++) {
+            xres *= x;
+        }
+        return xres;
+    }
     
+    function compute() 
+    {  
+        let myTable = [];
+        //create a board for the results
+        let numberA = document.getElementById("selected-number").value;
+        let numberB = document.getElementById("n").value;
+        console.log (puissance(2,3));
+        let result = puissance(numberA,numberB)
+        //taken the results from function compute
+
+
+    
+        // used displayArray fot the results
+        myTable.push(result)
+        //putting results into myTable
+        console.log(result);
+    }
     
 </script>
 </body>
